@@ -1,4 +1,7 @@
 <?php
+namespace Routers;
+
+use Exception;
 
 class PatternRouter {
 
@@ -26,8 +29,8 @@ class PatternRouter {
         $methodName = $explodedUri[1];
 
         try {
-            require __DIR__ . '/controllers/' . $controllerName . '.php';
-            $controllerObj = new $controllerName();
+            $controllerClass = "Controllers\\" . $controllerName;
+            $controllerObj = new $controllerClass();
             $controllerObj->$methodName();
         } catch (Exception $e) {
             http_response_code(404);

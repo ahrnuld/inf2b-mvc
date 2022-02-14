@@ -1,5 +1,7 @@
 <?php
-require __DIR__ . '/../services/articleservice.php';
+namespace Controllers;
+
+use Services\ArticleService;
 
 class ArticleController
 {

@@ -1,6 +1,8 @@
 <?php
-require __DIR__ . '/repository.php';
-require __DIR__ . '/../models/article.php';
+namespace Repositories;
+
+use PDO;
+use PDOException;
 
 class ArticleRepository extends Repository {
 
@@ -9,7 +11,7 @@ class ArticleRepository extends Repository {
             $stmt = $this->connection->prepare("SELECT * FROM article");
             $stmt->execute();
 
-            $stmt->setFetchMode(PDO::FETCH_CLASS, 'Article');
+            $stmt->setFetchMode(PDO::FETCH_CLASS, 'Models\\Article');
             $articles = $stmt->fetchAll();
 
             return $articles;

@@ -1,4 +1,6 @@
 <?php
+namespace Models;
+
 class Article {
 
     private int $id;

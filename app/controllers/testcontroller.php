@@ -1,12 +1,12 @@
 <?php
 namespace Controllers;
 
-class HomeController
+class TestController
 {
 
     public function index()
     {
-        require __DIR__ . '/../views/home/index.php';
+        echo "dit komt uit de testcontroller";
     }
 
     public function about()

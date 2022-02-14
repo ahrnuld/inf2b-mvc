@@ -1,5 +1,7 @@
 <?php
-require __DIR__ . '/../repositories/articlerepository.php';
+namespace Services;
+
+use Repositories\ArticleRepository;
 
 class ArticleService {
     public function getAll() {
